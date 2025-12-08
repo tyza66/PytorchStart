@@ -8,7 +8,7 @@ from torch.utils.tensorboard import SummaryWriter
 # 加载数据
 train_data = torchvision.datasets.CIFAR10(root='./data', train=True, download=True,
                                           transform=torchvision.transforms.ToTensor())
-test_data = torchvision.datasets.CIFAR10(root='./data', train=True, download=False,
+test_data = torchvision.datasets.CIFAR10(root='./data', train=False, download=False,
                                          transform=torchvision.transforms.ToTensor())
 
 train_data_size = len(train_data)

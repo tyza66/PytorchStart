@@ -84,12 +84,12 @@ for epoch in range(epochs):
     total_test_accuracy = 0
     with torch.no_grad():
         for data in test_dataloader:
-            images, labels = data
+            images, labels = data  # images是图像 labels是每个图像对应的标签（从0开始的下标）
             images, targets = images.to(device), labels.to(device)
             outputs = model(images)
             loss = loss_fn(outputs, labels)
             total_test_loss += loss.item()
-            accuracy = (outputs.argmax(1) == targets).sum()
+            accuracy = (outputs.argmax(1) == targets).sum() # 结果中是预测结果是每种情况的概率
             total_test_accuracy += accuracy
             total_test_step += 1
             if total_test_step % 100 == 0:

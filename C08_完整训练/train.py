@@ -26,7 +26,7 @@ print(device)
 # 模型定义
 class CIFAR10Model(nn.Module):
     def __init__(self):
-        super(CIFAR10Model, self).__init__()
+        super().__init__()
         # 各层序列
         self.model = nn.Sequential(
             nn.Conv2d(3, 32, 5, 1, 2),

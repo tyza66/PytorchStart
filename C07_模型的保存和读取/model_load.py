@@ -1,7 +1,7 @@
 import torch
 import torchvision
 
-# 直接加载整个模型 就可以使用
+# 直接加载整个模型 但是不推荐使用 也是需要有原本模型的结构代码才能使用
 model = torch.load("vgg16_method1.pth", weights_only=False)
 print(model)
 

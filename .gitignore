@@ -129,7 +129,6 @@ dmypy.json
 .pyre/
 
 # PyTorch
-*.pth
 *.pt
 
 # Data files (common in ML projects)
